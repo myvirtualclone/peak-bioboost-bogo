@@ -9785,36 +9785,78 @@ main.hero#offer{padding-bottom:0!important;}
 </div>
 </div>
 </section>
-<div class="pb22-sale-divider-wide">SALE ENDS SOON</div>
-<div class="pb22-cta-grid">
-<article class="pb22-cta-card pb22-cta-card-one">
-<div class="pb22-cta-head"><strong>1 JAR</strong><span>30 Day Supply</span><div class="pb22-cta-save-row"><span class="pb22-cta-save-pill"><span>SAVE</span><span>$15</span></span></div></div>
-<div class="pb22-cta-body">
-<div class="pb22-cta-jars pb22-cta-jars-one"><img src="https://secure.getpeakbiome.com/images/pb22/cart10-pbb-mobile-nobg.png" alt="Peak BioBoost jar" decoding="async"></div>
-<div class="pb22-cta-price"><div class="pb22-cta-current"><strong>$34.95</strong></div></div>
-</div>
-<button action="route" billnow="false" class="pb22-cta-button" offer="3155" onclick="route(event)" replaceproductid="" size="none" type="button" upsell="" variantvalue="">BUY NOW <span class="pb22-cta-button-compare">$50</span> <span class="pb22-cta-button-price">$34.95</span></button>
-<div class="pb22-cta-shipping">FREE SHIPPING <img src="https://secure.getpeakbiome.com/images/pb22/pb22-suboption-shipping-truck.svg" alt="" decoding="async"></div>
-</article>
-<article class="pb22-cta-card pb22-cta-card-featured pb22-cta-card-three">
-<div class="pb22-cta-head"><strong>3 JARS</strong><span>90 Day Supply</span><div class="pb22-cta-save-row"><span class="pb22-cta-save-pill"><span>SAVE</span><span>$75</span></span></div></div>
-<div class="pb22-cta-badge">BEST<br>VALUE</div>
-<div class="pb22-cta-body">
-<div class="pb22-cta-jars"><img src="https://secure.getpeakbiome.com/images/pb22/cart10-pbb-mobile-nobg.png" alt="Peak BioBoost jar" decoding="async"><img src="https://secure.getpeakbiome.com/images/pb22/cart10-pbb-mobile-nobg.png" alt="Peak BioBoost jar" decoding="async"><img src="https://secure.getpeakbiome.com/images/pb22/cart10-pbb-mobile-nobg.png" alt="Peak BioBoost jar" decoding="async"></div>
-<div class="pb22-cta-price"><div class="pb22-cta-current"><strong>$24.95</strong><small>/ea.</small></div><div class="pb22-cta-total">Total $74.85</div></div>
-</div>
-<button action="route" billnow="false" class="pb22-cta-button" offer="3159" onclick="route(event)" replaceproductid="" size="none" type="button" upsell="" variantvalue="">BUY NOW <span class="pb22-cta-button-compare">$150</span> <span class="pb22-cta-button-price">$74.85</span></button>
-<div class="pb22-cta-shipping">FREE SHIPPING <img src="https://secure.getpeakbiome.com/images/pb22/pb22-suboption-shipping-truck.svg" alt="" decoding="async"></div>
-</article>
-<article class="pb22-cta-card pb22-cta-card-two">
-<div class="pb22-cta-head"><strong>2 JARS</strong><span>60 Day Supply</span><div class="pb22-cta-save-row"><span class="pb22-cta-save-pill"><span>SAVE</span><span>$40</span></span></div></div>
-<div class="pb22-cta-body">
-<div class="pb22-cta-jars"><img src="https://secure.getpeakbiome.com/images/pb22/cart10-pbb-mobile-nobg.png" alt="Peak BioBoost jar" decoding="async"><img src="https://secure.getpeakbiome.com/images/pb22/cart10-pbb-mobile-nobg.png" alt="Peak BioBoost jar" decoding="async"></div>
-<div class="pb22-cta-price"><div class="pb22-cta-current"><strong>$29.95</strong><small>/ea.</small></div><div class="pb22-cta-total">Total $59.90</div></div>
-</div>
-<button action="route" billnow="false" class="pb22-cta-button" offer="3157" onclick="route(event)" replaceproductid="" size="none" type="button" upsell="" variantvalue="">BUY NOW <span class="pb22-cta-button-compare">$100</span> <span class="pb22-cta-button-price">$59.90</span></button>
-<div class="pb22-cta-shipping">FREE SHIPPING <img src="https://secure.getpeakbiome.com/images/pb22/pb22-suboption-shipping-truck.svg" alt="" decoding="async"></div>
-</article>
+<style>
+.bogo-wrap{max-width:560px;margin:8px auto 28px;padding:8px 16px 4px;font-family:"Inter",Arial,sans-serif;color:#111;background:#fff;border-radius:12px;}
+.bogo-sale{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;margin:8px 0 14px;color:#d61f1f;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;}
+.bogo-sale:before,.bogo-sale:after{content:"";height:1px;background:#d61f1f;}
+.bogo-h{margin:0;text-align:center;font-size:clamp(34px,8vw,44px);line-height:.95;font-weight:900;letter-spacing:-.03em;color:#0b2a5b;}
+.bogo-h span{color:#1b7a3a;}
+.bogo-sub{margin:10px 0 18px;text-align:center;font-size:16px;font-weight:500;color:#111;}
+.bogo-sub b{color:#1b7a3a;font-weight:800;}
+.bogo-table{border:1.5px solid #8ec4ea;border-radius:10px;padding:14px 16px 12px;background:#fff;}
+.bogo-table-head{display:flex;justify-content:space-between;margin-bottom:10px;color:#2b6cb0;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;}
+.bogo-row{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:baseline;padding:7px 0;font-size:15px;}
+.bogo-row .was{color:#9aa0a6;text-decoration:line-through;}
+.bogo-row .now{text-align:right;min-width:64px;font-weight:800;}
+.bogo-row .now.free{color:#1b7a3a;}
+.bogo-rule{height:1px;background:#d9e6f2;margin:8px 0 10px;}
+.bogo-total{display:flex;justify-content:space-between;align-items:baseline;font-weight:800;}
+.bogo-total .was{color:#9aa0a6;text-decoration:line-through;font-size:16px;}
+.bogo-today{display:flex;justify-content:space-between;align-items:baseline;margin-top:8px;color:#1e4ea0;font-size:18px;font-weight:800;}
+.bogo-today b{color:#1b7a3a;font-size:28px;letter-spacing:-.03em;}
+.bogo-note{margin:14px 2px 16px;font-size:15px;line-height:1.45;color:#111;}
+.bogo-choice{display:flex;align-items:center;gap:12px;padding:14px 16px;border:2px solid #2f6feb;border-radius:12px;background:#fff;}
+.bogo-radio{flex:0 0 22px;width:22px;height:22px;border:2px solid #2f6feb;border-radius:50%;position:relative;}
+.bogo-radio:after{content:"";position:absolute;inset:4px;border-radius:50%;background:#2f6feb;}
+.bogo-choice-copy{flex:1;color:#1e4ea0;font-weight:800;line-height:1.15;}
+.bogo-choice-copy small{display:block;font-size:13px;margin-top:2px;}
+.bogo-choice-was{margin-left:auto;padding-left:14px;border-left:1px solid #d8dee8;color:#8b919a;font-size:20px;font-weight:800;text-decoration:line-through;}
+.bogo-cta{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:58px;margin:16px 0 10px;border:0;border-radius:8px;background:#ff7a00;color:#fff;font-family:inherit;font-size:22px;font-weight:900;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;}
+.bogo-cta svg{width:22px;height:22px;flex:0 0 auto;}
+.bogo-trust{text-align:center;font-size:13px;color:#111;margin:0 0 12px;}
+.bogo-pay{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin:0 0 8px;}
+.bogo-pay span{display:inline-flex;align-items:center;justify-content:center;min-width:52px;height:28px;padding:0 8px;border:1px solid #d5dbe3;border-radius:4px;background:#fff;font-size:10px;font-weight:800;letter-spacing:.02em;color:#1a1f36;}
+.bogo-pay .visa{color:#1a1f71;}
+.bogo-pay .mc{color:#eb001b;}
+.bogo-pay .amex{color:#006fcf;}
+.bogo-pay .disc{color:#ff6000;}
+.bogo-pay .apay{color:#111;}
+.bogo-pay .pp{color:#003087;}
+@media(max-width:420px){
+  .bogo-wrap{padding:8px 10px;}
+  .bogo-h{font-size:32px;}
+  .bogo-today b{font-size:24px;}
+  .bogo-cta{font-size:18px;min-height:54px;}
+}
+</style>
+<div class="bogo-wrap" id="bogo-offer">
+  <div class="bogo-sale">SALE ENDS SOON</div>
+  <h2 class="bogo-h">BUY 1, GET 1 <span>FREE</span></h2>
+  <p class="bogo-sub">Get 2 jars of Peak BioBoost for just <b>$49.95</b></p>
+  <div class="bogo-table">
+    <div class="bogo-table-head"><span>Your BOGO Order</span><span>Value</span></div>
+    <div class="bogo-row"><span>Peak BioBoost Jar #1</span><span class="was">$50.00</span><span class="now">$50.00</span></div>
+    <div class="bogo-row"><span>Peak BioBoost Jar #2</span><span class="was">$50.00</span><span class="now free">FREE</span></div>
+    <div class="bogo-row"><span>Perfect Poops Cookbook</span><span class="was">$20.00</span><span class="now free">FREE</span></div>
+    <div class="bogo-row"><span>Shipping &amp; Handling (U.S.)</span><span class="was">$10.00</span><span class="now free">FREE</span></div>
+    <div class="bogo-rule"></div>
+    <div class="bogo-total"><span>Total value</span><span class="was">$130.00</span></div>
+    <div class="bogo-today"><span>Your price today</span><b>$49.95</b></div>
+  </div>
+  <p class="bogo-note">That's <strong>$130</strong> in total value for <strong>$49.95</strong> — and the 90-day guarantee means the risk is entirely ours.</p>
+  <label class="bogo-choice">
+    <span class="bogo-radio" aria-hidden="true"></span>
+    <input type="radio" name="bogo-plan" checked style="position:absolute;opacity:0;pointer-events:none" value="3157">
+    <span class="bogo-choice-copy">BOGO SPECIAL<small>2 JARS FOR $49.95</small></span>
+    <span class="bogo-choice-was">$100</span>
+  </label>
+  <button action="route" billnow="false" class="bogo-cta" offer="3157" onclick="route(event)" replaceproductid="" size="none" type="button" upsell="" variantvalue="">ADD TO CART
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <p class="bogo-trust">90-Day Guarantee • Free Shipping • Free Gift</p>
+  <div class="bogo-pay" aria-label="Accepted payment methods">
+    <span class="visa">VISA</span><span class="mc">MC</span><span class="amex">AMEX</span><span class="disc">DISC</span><span class="apay">Apple Pay</span><span class="pp">PayPal</span>
+  </div>
 </div>
 <section class="pb22-gift-strip" aria-label="Free gifts with your order">
 <div class="pb22-gift-card">
