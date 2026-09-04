@@ -2,6 +2,11 @@
 
 All notable changes to the Peak BioBoost BOGO landing page (`peak-bioboost-bogo`) are documented here.
 
+## [1.3.6] - 2026-09-04
+
+### Changed
+- Desktop: `.container.hero-grid` `margin-bottom: 15px` (split margin shorthand so it sticks without `!important`)
+
 ## [1.3.5] - 2026-09-04
 
 ### Changed
