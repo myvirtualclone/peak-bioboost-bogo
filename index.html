@@ -3670,7 +3670,7 @@
         #frontrow-badge iframe { width: 300px !important; max-width: 300px !important; height: 170px !important; min-height: 170px !important; border: 0 !important; background: transparent !important; display: block !important; }
         .original-bonus-area { padding: 0 20px 20px; background: #fff !important; }
         .original-bonus-area > .container { max-width: 1180px !important; width: 100% !important; margin: 0 auto !important; padding: 0 !important; }
-        .hybrid-guarantee-area { background: #f5f5f5; padding: 0 20px 34px !important; }
+        .hybrid-guarantee-area { background: #f5f5f5; padding: 0 20px 34px; }
         .hybrid-guarantee-area .container { max-width: 1180px !important; width: 100% !important; margin: 0 auto !important; padding: 0 !important; }
         .hybrid-guarantee-card { display: grid !important; grid-template-columns: 180px 1fr !important; gap: 24px !important; align-items: center !important; border: 2px solid #009cd5 !important; border-radius: 22px !important; background: #fff !important; padding: 28px 34px !important; box-shadow: 0 12px 28px rgba(0, 156, 213, .10) !important; }
         .hybrid-guarantee-seal img { width: 160px !important; height: auto !important; margin: 0 auto !important; }
@@ -5752,7 +5752,7 @@ main.hero#offer .verified-dot::before,
   font-size:10px!important;
   line-height:1!important;
 }
-.hybrid-guarantee-area{background:#f5f5f5!important;padding:0 0 34px!important;}
+.hybrid-guarantee-area{background:#f5f5f5;padding:0 0 34px;}
 .hybrid-guarantee-card{display:grid!important;grid-template-columns:180px 1fr!important;gap:24px!important;align-items:center!important;border:2px solid #009cd5!important;border-radius:22px!important;background:#fff!important;padding:28px 34px!important;box-shadow:0 12px 28px rgba(0,156,213,.10)!important;}
 .hybrid-guarantee-seal img{width:160px!important;height:auto!important;margin:0 auto!important;object-fit:contain!important;}
 .hybrid-guarantee-copy h2{margin:0 0 16px!important;color:#0b3b6f!important;font-size:40px!important;line-height:1.05!important;font-weight:900!important;letter-spacing:-.04em!important;}
@@ -9676,8 +9676,8 @@ html body .cookbook-recipe-preview > .cookbook-category-grid{
 .pb22-gift-value span{display:inline!important;margin:0!important;padding:0!important;font:inherit!important;line-height:inherit!important;white-space:nowrap!important;}
 .pb22-cta-insert section.original-bonus-area{background:#f5f5f5!important;padding-bottom:20px;}
 main.hero#offer{padding-bottom:0!important;}
-#guarantee.hybrid-guarantee-area{background:#f5f5f5!important;margin-top:0!important;padding-top:0!important;padding-bottom:16px!important;}
-@media(min-width:901px){#guarantee.hybrid-guarantee-area{padding-top:25px!important;}}
+#guarantee.hybrid-guarantee-area{background:#f5f5f5;margin-top:0;padding-top:0;padding-bottom:16px;}
+@media(min-width:901px){#guarantee.hybrid-guarantee-area{padding-top:0;}}
 .faq-area{background:#f5f5f5!important;}
 @media(max-width:900px){
 .pb22-cta-insert{padding:0;margin-bottom:0;}
@@ -9800,9 +9800,19 @@ main.hero#offer{padding-bottom:0!important;}
   padding:0;
   box-sizing:border-box;
 }
-.bogo-offer-row .pb22-gift-strip{grid-column:1;grid-row:1;}
-.bogo-offer-row .bogo-wrap{grid-column:2;grid-row:1;}
+.bogo-offer-row .pb22-gift-strip{
+  grid-column:1;
+  grid-row:1;
+  max-width:none;
+  width:100%;
+  margin:0;
+  padding:0;
+  height:100%;
+  box-sizing:border-box;
+}
 .bogo-offer-row .bogo-wrap{
+  grid-column:2;
+  grid-row:1;
   max-width:none;
   width:100%;
   margin:0;
@@ -9812,14 +9822,6 @@ main.hero#offer{padding-bottom:0!important;}
   display:flex;
   flex-direction:column;
 }
-.bogo-offer-row .pb22-gift-strip{
-  max-width:none !important;
-  width:100% !important;
-  margin:0 !important;
-  padding:0 !important;
-  height:100%;
-  box-sizing:border-box;
-}
 .bogo-offer-row .pb22-gift-card{
   height:100%;
   min-height:100%;
@@ -9828,10 +9830,10 @@ main.hero#offer{padding-bottom:0!important;}
   justify-content:flex-start;
   box-sizing:border-box;
   padding:0;
-  border:0 !important;
-  border-radius:0 !important;
-  background:transparent !important;
-  box-shadow:none !important;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
   overflow:visible;
 }
 .pb22-gift-hero-art{
@@ -9848,9 +9850,13 @@ main.hero#offer{padding-bottom:0!important;}
   object-fit:contain;
   margin:0 auto;
 }
-/* Desktop: blue border + inner padding separates bottles above from $43 block */
 .pb22-gift-panel{
   box-sizing:border-box;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  padding:0;
+  margin:0;
 }
 .bogo-offer-row .pb22-gift-title{
   margin:10px 18px 8px;
@@ -9884,7 +9890,6 @@ main.hero#offer{padding-bottom:0!important;}
   line-height:1.2;
 }
 .bogo-offer-row .pb22-gift-value{margin-top:6px;}
-/* Trust strip: match offer-row width (full two-column span) */
 .bogo-trust-bar{
   max-width:1100px;
   width:calc(100% - 32px);
@@ -9920,45 +9925,36 @@ main.hero#offer{padding-bottom:0!important;}
   margin:0;
 }
 .bogo-trust-bar .payment-logos-img{
-  display:block !important;
-  width:100% !important;
-  max-width:420px !important;
-  height:auto !important;
-  margin:0 auto !important;
+  display:block;
+  width:100%;
+  max-width:420px;
+  height:auto;
+  margin:0 auto;
 }
+/* Continuous gray buy→guarantee band — later/more-specific, no !important */
 .pb22-cta-insert{
-  background:#f5f5f5 !important;
-  padding-bottom:0 !important;
-  margin-bottom:0 !important;
+  background:#f5f5f5;
+  padding-bottom:0;
+  margin-bottom:0;
 }
-.pb22-cta-insert #guarantee.hybrid-guarantee-area,
-.pb22-cta-insert .hybrid-guarantee-area,
-section#guarantee.hybrid-guarantee-area,
-#guarantee.hybrid-guarantee-area{
-  background:#f5f5f5 !important;
-  background-color:#f5f5f5 !important;
-  margin:0 !important;
-  padding:20px 20px 28px !important;
+.pb22-cta-insert > #guarantee.hybrid-guarantee-area{
+  background:#f5f5f5;
+  background-color:#f5f5f5;
+  margin:0;
+  padding:0 20px 28px;
 }
 @media (min-width:901px){
-  .bogo-offer-row .bogo-cta{margin-top:0 !important;}
-  .bogo-offer-row .pb22-gift-hero-img{max-width:385px !important;}
-  .bogo-offer-row .pb22-gift-title-text{display:block;margin-top:15px !important;}
-  .bogo-offer-row .bogo-row{padding:3px 0 !important;}
-  .bogo-offer-row .bogo-wrap{padding-left:20px !important;padding-right:20px !important;}
+  .bogo-offer-row .bogo-cta{margin-top:0;}
+  .bogo-offer-row .pb22-gift-hero-img{max-width:385px;}
+  .bogo-offer-row .pb22-gift-title-text{display:block;margin-top:15px;}
+  .bogo-offer-row .bogo-row{padding:3px 0;}
+  .bogo-offer-row .bogo-wrap{padding-left:20px;padding-right:20px;}
   .bogo-offer-row .pb22-gift-panel{
-    border:1.5px solid #9ec9ea;
-    border-radius:12px;
-    background:#fff;
-    padding:12px 20px 16px;
+    border:0;
+    border-radius:0;
+    background:transparent;
+    padding:0;
     margin:0;
-  }
-  /* Align trust bar to same left/right edges as the two-column row */
-  .bogo-trust-bar{
-    max-width:1100px;
-    width:calc(100% - 32px);
-    margin-top:15px;
-    padding-bottom:0;
   }
 }
 @media (max-width:900px){
@@ -9970,19 +9966,23 @@ section#guarantee.hybrid-guarantee-area,
     margin:8px auto 8px;
   }
   .bogo-offer-row .bogo-wrap{grid-column:1;grid-row:1;padding:8px 10px 4px;}
-  .bogo-offer-row .pb22-gift-strip{grid-column:1;grid-row:2;padding:0 !important;margin:0 !important;}
-  /* Keep white bordered $43 card on mobile; only hide jar art above it */
-  .bogo-offer-row .pb22-gift-hero-art{display:none !important;}
-  .bogo-offer-row .pb22-gift-panel{
-    border:1.5px solid #9ec9ea !important;
-    border-radius:12px !important;
-    background:#fff !important;
-    padding:12px 14px 16px !important;
-    margin:0 !important;
-    box-shadow:none !important;
+  .bogo-offer-row .pb22-gift-strip{
+    grid-column:1;
+    grid-row:2;
+    padding:0;
+    margin:15px 0 0;
   }
-  .bogo-offer-row .bogo-row{padding:4px 0 !important;gap:0 !important;}
-  .bogo-offer-row .bogo-cta{margin-top:0 !important;}
+  .bogo-offer-row .pb22-gift-hero-art{display:none;}
+  .bogo-offer-row .pb22-gift-panel{
+    border:0;
+    border-radius:0;
+    background:transparent;
+    padding:0;
+    margin:0;
+    box-shadow:none;
+  }
+  .bogo-offer-row .bogo-row{padding:4px 0;gap:0;}
+  .bogo-offer-row .bogo-cta{margin-top:0;}
   .bogo-offer-row .pb22-gift-title{margin:10px 8px 10px;font-size:24px;}
   .bogo-offer-row .pb22-gift-items{padding:6px 6px 8px;}
   .bogo-trust-bar{
@@ -9990,6 +9990,13 @@ section#guarantee.hybrid-guarantee-area,
     width:calc(100% - 24px);
     margin-top:15px;
     padding-bottom:0;
+  }
+  .bogo-trust-bar .v2-trust-line{font-size:15px;}
+  .pb22-cta-insert > #guarantee.hybrid-guarantee-area{
+    padding-top:0;
+    padding-left:20px;
+    padding-right:20px;
+    padding-bottom:28px;
   }
 }
 
@@ -10065,7 +10072,7 @@ section#guarantee.hybrid-guarantee-area,
 <div class="pb22-gift-value"><span>$20</span><span>VALUE</span></div>
 </div>
 <div class="pb22-gift-item">
-<div class="pb22-gift-icon"><img src="images/pb22-suboption-shipping-truck.svg" alt="" decoding="async" referrerpolicy="no-referrer"></div>
+<div class="pb22-gift-icon"><img src="https://secure.getpeakbiome.com/images/pb22/pb22-suboption-shipping-truck.svg" alt="" decoding="async" referrerpolicy="no-referrer"></div>
 <div class="pb22-gift-label">FREE<br>SHIPPING</div>
 <div class="pb22-gift-value"><span>$10</span><span>VALUE</span></div>
 </div>
@@ -10075,7 +10082,7 @@ section#guarantee.hybrid-guarantee-area,
 <div class="pb22-gift-value"><span>$10</span><span>VALUE</span></div>
 </div>
 <div class="pb22-gift-item">
-<div class="pb22-gift-icon"><img src="images/pb22-suboption-shield.svg" alt="" decoding="async" referrerpolicy="no-referrer"></div>
+<div class="pb22-gift-icon"><img src="https://secure.getpeakbiome.com/images/pb22/pb22-suboption-shield.svg" alt="" decoding="async" referrerpolicy="no-referrer"></div>
 <div class="pb22-gift-label">FREE SHIPPING<br>INSURANCE</div>
 <div class="pb22-gift-value"><span>$3</span><span>VALUE</span></div>
 </div>
