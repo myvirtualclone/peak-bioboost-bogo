@@ -2,20 +2,19 @@
 
 All notable changes to the Peak BioBoost BOGO landing page (`peak-bioboost-bogo`) are documented here.
 
+## [1.2.0] - 2026-09-04
+
+### Changed
+- Reverted section order to original (use-it → offer → cookbook → BOGO)
+- On desktop, placed `$43` free-gifts strip to the right of the BOGO offer in a balanced two-column row
+- Mobile keeps stacked layout (BOGO, then gifts)
+
 ## [1.1.1] - 2026-09-04
 
 ### Fixed
-- Actually moved FREE GIFT cookbook under “The longer you use it…” (before `#offer`)
-- Actually moved BOGO buy block + free-gifts strip directly under the gut-rhythm product bullet
-- Kept mini FAQ / spotlight review after the BOGO block
+- Section moves for FREE GIFT / BOGO (later reverted in 1.2.0)
 
 ## [1.1.0] - 2026-09-04
 
-### Changed
-- Section spacing adjusted to better match older LP layout (list-pb2221-0)
-
 ### Added
 - Started this changelog for page iteration history
-
-### Note
-- 1.1.0 commit included changelog + spacing only; section moves completed in 1.1.1
