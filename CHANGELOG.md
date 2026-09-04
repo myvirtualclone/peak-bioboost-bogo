@@ -2,6 +2,13 @@
 
 All notable changes to the Peak BioBoost BOGO landing page (`peak-bioboost-bogo`) are documented here.
 
+## [1.3.4] - 2026-09-04
+
+### Changed
+- Mobile: show 2-jar image under “Get 2 jars…”; hide duplicate jars in gifts column
+- Removed trust/payment strip under the BOGO row
+- Restored white background on `$43` gifts panel (no blue border)
+
 ## [1.3.3] - 2026-09-04
 
 ### Changed

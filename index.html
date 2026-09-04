@@ -9850,13 +9850,23 @@ main.hero#offer{padding-bottom:0!important;}
   object-fit:contain;
   margin:0 auto;
 }
+/* White $43 panel, no blue border */
 .pb22-gift-panel{
   box-sizing:border-box;
   border:0;
-  border-radius:0;
-  background:transparent;
-  padding:0;
+  border-radius:12px;
+  background:#fff;
+  padding:12px 16px 16px;
   margin:0;
+}
+.bogo-mobile-jars{display:none;}
+.bogo-mobile-jars-img{
+  display:block;
+  width:100%;
+  max-width:320px;
+  height:auto;
+  margin:8px auto 14px;
+  object-fit:contain;
 }
 .bogo-offer-row .pb22-gift-title{
   margin:10px 18px 8px;
@@ -9867,7 +9877,7 @@ main.hero#offer{padding-bottom:0!important;}
 .bogo-offer-row .pb22-gift-items{
   grid-template-columns:repeat(2,minmax(0,1fr));
   gap:12px 8px;
-  padding:6px 14px 18px;
+  padding:6px 14px 10px;
   margin-top:auto;
   align-content:center;
 }
@@ -9890,48 +9900,6 @@ main.hero#offer{padding-bottom:0!important;}
   line-height:1.2;
 }
 .bogo-offer-row .pb22-gift-value{margin-top:6px;}
-.bogo-trust-bar{
-  max-width:1100px;
-  width:calc(100% - 32px);
-  margin:15px auto 0;
-  padding:0;
-  padding-bottom:0;
-  box-sizing:border-box;
-}
-.bogo-trust-bar .v2-trust-card{
-  background:#fff;
-  border-radius:14px;
-  text-align:center;
-  border:1px solid #dde3ec;
-  margin:0;
-  padding:14px 16px 12px;
-  box-shadow:0 8px 22px rgba(10,38,80,.06);
-  box-sizing:border-box;
-  width:100%;
-}
-.bogo-trust-bar .v2-trust-line{
-  text-align:center;
-  font-size:16px;
-  color:#111;
-  font-weight:500;
-  margin:0 0 10px;
-}
-.bogo-trust-bar .v2-payment-logos{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  flex-wrap:wrap;
-  margin:0;
-}
-.bogo-trust-bar .payment-logos-img{
-  display:block;
-  width:100%;
-  max-width:420px;
-  height:auto;
-  margin:0 auto;
-}
-/* Continuous gray buy→guarantee band — later/more-specific, no !important */
 .pb22-cta-insert{
   background:#f5f5f5;
   padding-bottom:0;
@@ -9949,13 +9917,7 @@ main.hero#offer{padding-bottom:0!important;}
   .bogo-offer-row .pb22-gift-title-text{display:block;margin-top:15px;}
   .bogo-offer-row .bogo-row{padding:3px 0;}
   .bogo-offer-row .bogo-wrap{padding-left:20px;padding-right:20px;}
-  .bogo-offer-row .pb22-gift-panel{
-    border:0;
-    border-radius:0;
-    background:transparent;
-    padding:0;
-    margin:0;
-  }
+  .bogo-mobile-jars{display:none;}
 }
 @media (max-width:900px){
   .bogo-offer-row{
@@ -9972,12 +9934,14 @@ main.hero#offer{padding-bottom:0!important;}
     padding:0;
     margin:15px 0 0;
   }
+  /* Mobile: jars under "Get 2 jars..." ; hide duplicate jars in gifts column */
+  .bogo-mobile-jars{display:block;}
   .bogo-offer-row .pb22-gift-hero-art{display:none;}
   .bogo-offer-row .pb22-gift-panel{
     border:0;
-    border-radius:0;
-    background:transparent;
-    padding:0;
+    border-radius:12px;
+    background:#fff;
+    padding:12px 14px 16px;
     margin:0;
     box-shadow:none;
   }
@@ -9985,13 +9949,6 @@ main.hero#offer{padding-bottom:0!important;}
   .bogo-offer-row .bogo-cta{margin-top:0;}
   .bogo-offer-row .pb22-gift-title{margin:10px 8px 10px;font-size:24px;}
   .bogo-offer-row .pb22-gift-items{padding:6px 6px 8px;}
-  .bogo-trust-bar{
-    max-width:560px;
-    width:calc(100% - 24px);
-    margin-top:15px;
-    padding-bottom:0;
-  }
-  .bogo-trust-bar .v2-trust-line{font-size:15px;}
   .pb22-cta-insert > #guarantee.hybrid-guarantee-area{
     padding-top:0;
     padding-left:20px;
@@ -10041,6 +9998,9 @@ main.hero#offer{padding-bottom:0!important;}
   <div class="bogo-sale">SALE ENDS SOON</div>
   <h2 class="bogo-h">BUY 1, GET 1 <span>FREE</span></h2>
   <p class="bogo-sub">Get 2 jars of Peak BioBoost for just <b>$49.95</b></p>
+  <div class="bogo-mobile-jars" aria-hidden="false">
+    <img src="images/2ndjarfree.png" alt="Two jars of Peak BioBoost — buy 1 get 1 free" class="bogo-mobile-jars-img" decoding="async">
+  </div>
   <div class="bogo-table">
     <div class="bogo-table-head"><span>Your BOGO Order</span><span>Value</span></div>
     <div class="bogo-row"><span>Peak BioBoost Jar #1</span><span class="was">$50.00</span><span class="now">$50.00</span></div>
@@ -10091,16 +10051,6 @@ main.hero#offer{padding-bottom:0!important;}
 </div>
 </section>
 </div>
-
-<div class="bogo-trust-bar">
-  <div class="v2-trust-card">
-    <div class="v2-trust-line">90-Day Guarantee • Free Shipping • Free Gift</div>
-    <div class="v2-payment-logos" aria-label="Payment methods">
-      <img class="payment-logos-img" src="images/pmtlogos.png" alt="Accepted payment methods" decoding="async">
-    </div>
-  </div>
-</div>
-
 
 <!-- guarantee area start hare  -->
 <section class="hybrid-guarantee-area" id="guarantee">
