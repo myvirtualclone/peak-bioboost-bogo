@@ -2,6 +2,11 @@
 
 All notable changes to the Peak BioBoost BOGO landing page (`peak-bioboost-bogo`) are documented here.
 
+## [1.3.8] - 2026-09-04
+
+### Changed
+- 2-jar image `src` → `https://secure.getpeakbiome.com/images/pb22/2ndjarfree.png` (desktop + mobile)
+
 ## [1.3.7] - 2026-09-04
 
 ### Changed

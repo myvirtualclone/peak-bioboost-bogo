@@ -84,7 +84,7 @@ https://secure.getpeakbiome.com/images/pb22/claimoffer-2gifts.png
 https://secure.getpeakbiome.com/images/pb22/guarantee.png
 https://secure.getpeakbiome.com/images/pb22/2ndjarfree.png
 # Local Pages mirrors (hotlink-safe) 2026-09-04
-images/2ndjarfree.png
+https://secure.getpeakbiome.com/images/pb22/2ndjarfree.png
 images/cookbookimage.png
 images/pb22-suboption-shipping-truck.svg
 images/freereturnshipping.png
