@@ -2,27 +2,21 @@
 
 All notable changes to the Peak BioBoost BOGO landing page (`peak-bioboost-bogo`) are documented here.
 
+## [1.3.1] - 2026-09-04
+
+### Changed
+- Desktop buy-area CSS: CTA `margin-top:0`, jar art `max-width:385px`, title text `margin-top:15px`, row padding `3px 0`, BOGO wrap side padding `20px`
+- Line break after “FREE Gifts” in the `$43` headline
+- Trust/payment strip wrapped in rounded `#9ec9ea` bordered box with 20px outer side padding
+- Guarantee section moved into the buy-area gray band so the blue/gray gap is gone
+- Mirrored gift icons, payment logos, and `2ndjarfree` into `images/` (GitHub Pages was hotlink-blocked by the CDN)
+
 ## [1.3.0] - 2026-09-04
 
 ### Changed
-- Desktop: `$43` gifts card on the left, BOGO buy card on the right
-- BOGO order table: added Return Shipping ($10 FREE) and Shipping Insurance ($3 FREE); total value now $143
-- Moved 90-day trust line + payment logos under the two-card row (spans row width, narrower than the Perfect Poops guarantee block)
-- Guarantee section background matched to buy-area gray (`#f5f5f5`) instead of pale blue
-- Added `referrerpolicy` / no-referrer meta so CDN images load on GitHub Pages
-
-## [1.2.1] - 2026-09-04
-
-### Changed
-- Added `2ndjarfree.png` above the `$43` free-gifts headline
-- Rebalanced the free-gifts card next to BOGO on desktop
+- Desktop gifts left / BOGO right; return + insurance rows ($143); trust bar under pair; gray guarantee bg attempt
 
 ## [1.2.0] - 2026-09-04
 
 ### Changed
-- Reverted section order to original; desktop two-column BOGO + gifts row
-
-## [1.1.0] - 2026-09-04
-
-### Added
-- Started this changelog for page iteration history
+- Two-column BOGO + gifts row; changelog started

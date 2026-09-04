@@ -9678,7 +9678,7 @@ html body .cookbook-recipe-preview > .cookbook-category-grid{
 main.hero#offer{padding-bottom:0!important;}
 #guarantee.hybrid-guarantee-area{background:#f5f5f5!important;margin-top:0!important;padding-top:0!important;padding-bottom:16px!important;}
 @media(min-width:901px){#guarantee.hybrid-guarantee-area{padding-top:25px!important;}}
-.faq-area{background:#f2fbff!important;}
+.faq-area{background:#f5f5f5!important;}
 @media(max-width:900px){
 .pb22-cta-insert{padding:0;margin-bottom:0;}
 .pb22-sale-divider-wide{gap:12px;margin-top:20px;margin-bottom:20px;font-size:16px;}
@@ -9800,7 +9800,6 @@ main.hero#offer{padding-bottom:0!important;}
   padding:0;
   box-sizing:border-box;
 }
-/* Desktop: gifts LEFT, BOGO RIGHT */
 .bogo-offer-row .pb22-gift-strip{grid-column:1;grid-row:1;}
 .bogo-offer-row .bogo-wrap{grid-column:2;grid-row:1;}
 .bogo-offer-row .bogo-wrap{
@@ -9869,8 +9868,6 @@ main.hero#offer{padding-bottom:0!important;}
   max-height:48px;
   width:auto;
   height:auto;
-  opacity:1;
-  visibility:visible;
 }
 .bogo-offer-row .pb22-gift-label{
   min-height:34px;
@@ -9878,26 +9875,32 @@ main.hero#offer{padding-bottom:0!important;}
   line-height:1.2;
 }
 .bogo-offer-row .pb22-gift-value{margin-top:6px;}
-/* Trust / payment logos bar under the two cards — spans row width, narrower than guarantee card */
 .bogo-trust-bar{
   max-width:1100px;
   width:calc(100% - 32px);
-  margin:0 auto 28px;
+  margin:0 auto 0;
+  padding:0 20px 24px;
   box-sizing:border-box;
 }
-.bogo-trust-bar .v2-trust-card{
+.bogo-trust-box{
+  border:1.5px solid #9ec9ea;
+  border-radius:12px;
   background:#fff;
-  border-radius:14px;
-  text-align:center;
-  border:1px solid #dde3ec;
-  margin:0;
+  box-sizing:border-box;
   padding:14px 16px 12px;
-  box-shadow:0 8px 22px rgba(10,38,80,.06);
+}
+.bogo-trust-bar .v2-trust-card{
+  background:transparent;
+  border:0;
+  border-radius:0;
+  text-align:center;
+  margin:0;
+  padding:0;
+  box-shadow:none;
 }
 .bogo-trust-bar .v2-trust-line{
   text-align:center;
   font-size:16px;
-  font-style:normal;
   color:#111;
   font-weight:500;
   margin:0 0 10px;
@@ -9910,21 +9913,34 @@ main.hero#offer{padding-bottom:0!important;}
   flex-wrap:wrap;
   margin:0;
 }
-.bogo-trust-bar .v2-payment-logos img,
 .bogo-trust-bar .payment-logos-img{
   display:block !important;
   width:100% !important;
   max-width:420px !important;
   height:auto !important;
   margin:0 auto !important;
-  opacity:1 !important;
-  visibility:visible !important;
 }
-/* Match buy-area gray behind guarantee (kill pale blue) */
-section#guarantee.hybrid-guarantee-area,
-#guarantee.hybrid-guarantee-area,
-.hybrid-guarantee-area#guarantee{
+/* Continuous gray buy→guarantee band */
+.pb22-cta-insert{
   background:#f5f5f5 !important;
+  padding-bottom:0 !important;
+  margin-bottom:0 !important;
+}
+.pb22-cta-insert #guarantee.hybrid-guarantee-area,
+.pb22-cta-insert .hybrid-guarantee-area,
+section#guarantee.hybrid-guarantee-area,
+#guarantee.hybrid-guarantee-area{
+  background:#f5f5f5 !important;
+  background-color:#f5f5f5 !important;
+  margin:0 !important;
+  padding:20px 20px 28px !important;
+}
+@media (min-width:901px){
+  .bogo-offer-row .bogo-cta{margin-top:0 !important;}
+  .bogo-offer-row .pb22-gift-hero-img{max-width:385px !important;}
+  .bogo-offer-row .pb22-gift-title-text{display:block;margin-top:15px !important;}
+  .bogo-offer-row .bogo-row{padding:3px 0 !important;}
+  .bogo-offer-row .bogo-wrap{padding-left:20px !important;padding-right:20px !important;}
 }
 @media (max-width:900px){
   .bogo-offer-row{
@@ -9934,7 +9950,6 @@ section#guarantee.hybrid-guarantee-area,
     gap:14px;
     margin:8px auto 8px;
   }
-  /* Mobile: BOGO first, gifts below */
   .bogo-offer-row .bogo-wrap{grid-column:1;grid-row:1;padding:8px 10px 4px;}
   .bogo-offer-row .pb22-gift-strip{grid-column:1;grid-row:2;}
   .pb22-gift-hero-art{padding:14px 12px 0;}
@@ -9944,7 +9959,7 @@ section#guarantee.hybrid-guarantee-area,
   .bogo-trust-bar{
     max-width:560px;
     width:calc(100% - 24px);
-    margin:0 auto 24px;
+    padding:0 20px 20px;
   }
 }
 
@@ -10009,27 +10024,27 @@ section#guarantee.hybrid-guarantee-area,
 <section class="pb22-gift-strip" aria-label="Free gifts with your order">
 <div class="pb22-gift-card">
 <div class="pb22-gift-hero-art">
-<img src="https://secure.getpeakbiome.com/images/pb22/2ndjarfree.png" alt="Buy 1 Get 1 Free — second jar free" class="pb22-gift-hero-img" decoding="async" referrerpolicy="no-referrer">
+<img src="images/2ndjarfree.png" alt="Buy 1 Get 1 Free — second jar free" class="pb22-gift-hero-img" decoding="async" referrerpolicy="no-referrer">
 </div>
-<h2 class="pb22-gift-title"><span class="pb22-gift-title-text"><strong>$43.00</strong> of FREE Gifts<span class="pb22-gift-mobile-break"></span> With Your Order</span></h2>
+<h2 class="pb22-gift-title"><span class="pb22-gift-title-text"><strong>$43.00</strong> of FREE Gifts<br><span class="pb22-gift-mobile-break"></span> With Your Order</span></h2>
 <div class="pb22-gift-items">
 <div class="pb22-gift-item">
-<div class="pb22-gift-icon pb22-gift-icon-book"><img src="https://secure.getpeakbiome.com/images/pb22/cookbookimage.png" alt="" decoding="async" referrerpolicy="no-referrer"></div>
+<div class="pb22-gift-icon pb22-gift-icon-book"><img src="images/cookbookimage.png" alt="" decoding="async" referrerpolicy="no-referrer"></div>
 <div class="pb22-gift-label">FREE<br>COOKBOOK</div>
 <div class="pb22-gift-value"><span>$20</span><span>VALUE</span></div>
 </div>
 <div class="pb22-gift-item">
-<div class="pb22-gift-icon"><img src="https://secure.getpeakbiome.com/images/pb22/pb22-suboption-shipping-truck.svg" alt="" decoding="async" referrerpolicy="no-referrer"></div>
+<div class="pb22-gift-icon"><img src="images/pb22-suboption-shipping-truck.svg" alt="" decoding="async" referrerpolicy="no-referrer"></div>
 <div class="pb22-gift-label">FREE<br>SHIPPING</div>
 <div class="pb22-gift-value"><span>$10</span><span>VALUE</span></div>
 </div>
 <div class="pb22-gift-item">
-<div class="pb22-gift-icon"><img src="https://secure.getpeakbiome.com/images/pb22/freereturnshipping.png" alt="" decoding="async" referrerpolicy="no-referrer"></div>
+<div class="pb22-gift-icon"><img src="images/freereturnshipping.png" alt="" decoding="async" referrerpolicy="no-referrer"></div>
 <div class="pb22-gift-label">FREE RETURN<br>SHIPPING</div>
 <div class="pb22-gift-value"><span>$10</span><span>VALUE</span></div>
 </div>
 <div class="pb22-gift-item">
-<div class="pb22-gift-icon"><img src="https://secure.getpeakbiome.com/images/pb22/pb22-suboption-shield.svg" alt="" decoding="async" referrerpolicy="no-referrer"></div>
+<div class="pb22-gift-icon"><img src="images/pb22-suboption-shield.svg" alt="" decoding="async" referrerpolicy="no-referrer"></div>
 <div class="pb22-gift-label">FREE SHIPPING<br>INSURANCE</div>
 <div class="pb22-gift-value"><span>$3</span><span>VALUE</span></div>
 </div>
@@ -10039,16 +10054,17 @@ section#guarantee.hybrid-guarantee-area,
 </div>
 
 <div class="bogo-trust-bar">
-  <div class="v2-trust-card">
-    <div class="v2-trust-line">90-Day Guarantee • Free Shipping • Free Gift</div>
-    <div class="v2-payment-logos" aria-label="Payment methods">
-      <img class="payment-logos-img" src="https://secure.getpeakbiome.com/images/pb34/pmtlogos.png" alt="Accepted payment methods" decoding="async" referrerpolicy="no-referrer">
+  <div class="bogo-trust-box">
+    <div class="v2-trust-card">
+      <div class="v2-trust-line">90-Day Guarantee • Free Shipping • Free Gift</div>
+      <div class="v2-payment-logos" aria-label="Payment methods">
+        <img class="payment-logos-img" src="images/pmtlogos.png" alt="Accepted payment methods" decoding="async">
+      </div>
     </div>
   </div>
 </div>
 
-</div>
-</main>
+
 <!-- guarantee area start hare  -->
 <section class="hybrid-guarantee-area" id="guarantee">
   <div class="container">
@@ -10066,6 +10082,9 @@ section#guarantee.hybrid-guarantee-area,
   </div>
 </section>
 <!-- guarantee area end hare  -->
+
+</div>
+</main>
 <!-- faq area start hare  -->
 <section class="faq-area">
 <div class="faq-container">
