@@ -9813,15 +9813,10 @@ main.hero#offer{padding-bottom:0!important;}
 .bogo-choice-was{margin-left:auto;padding-left:14px;border-left:1px solid #d8dee8;color:#8b919a;font-size:20px;font-weight:800;text-decoration:line-through;}
 .bogo-cta{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;height:62px;min-height:62px;margin:16px 0 10px;border:0;border-radius:999px;background:#ff7f00;color:#fff;font-family:inherit;font-size:36px;font-weight:900;letter-spacing:.03em;text-transform:uppercase;cursor:pointer;box-shadow:0 8px 18px rgba(255,127,0,.28);}
 .bogo-cta svg{width:35px;height:35px;flex:0 0 auto;}
-.bogo-trust{text-align:center;font-size:13px;color:#111;margin:0 0 12px;}
-.bogo-pay{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin:0 0 8px;}
-.bogo-pay span{display:inline-flex;align-items:center;justify-content:center;min-width:52px;height:28px;padding:0 8px;border:1px solid #d5dbe3;border-radius:4px;background:#fff;font-size:10px;font-weight:800;letter-spacing:.02em;color:#1a1f36;}
-.bogo-pay .visa{color:#1a1f71;}
-.bogo-pay .mc{color:#eb001b;}
-.bogo-pay .amex{color:#006fcf;}
-.bogo-pay .disc{color:#ff6000;}
-.bogo-pay .apay{color:#111;}
-.bogo-pay .pp{color:#003087;}
+.bogo-wrap .v2-trust-card{background:#fff;border-radius:14px;text-align:center;border:1px solid #dde3ec;margin:12px 0 8px;padding:14px 16px 12px;}
+.bogo-wrap .v2-trust-line{text-align:center;font-size:16px;font-style:normal;color:#111;font-weight:500;margin:0 0 10px;}
+.bogo-wrap .v2-payment-logos{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin:0;}
+.bogo-wrap .v2-payment-logos img{display:block;height:auto;max-width:280px;width:100%;}
 @media(max-width:420px){
   .bogo-wrap{padding:8px 10px;}
   .bogo-h{font-size:32px;}
@@ -9857,9 +9852,11 @@ main.hero#offer{padding-bottom:0!important;}
   <button action="route" billnow="false" class="bogo-cta" offer="3157" onclick="route(event)" replaceproductid="" size="none" type="button" upsell="" variantvalue="">ADD TO CART
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </button>
-  <p class="bogo-trust">90-Day Guarantee • Free Shipping • Free Gift</p>
-  <div class="bogo-pay" aria-label="Accepted payment methods">
-    <span class="visa">VISA</span><span class="mc">MC</span><span class="amex">AMEX</span><span class="disc">DISC</span><span class="apay">Apple Pay</span><span class="pp">PayPal</span>
+  <div class="v2-trust-card">
+    <div class="v2-trust-line">90-Day Guarantee • Free Shipping • Free Gift</div>
+    <div class="v2-payment-logos" aria-label="Payment methods">
+      <img class="payment-logos-img" src="https://secure.getpeakbiome.com/images/pb34/pmtlogos.png" alt="Accepted payment methods" decoding="async">
+    </div>
   </div>
 </div>
 <section class="pb22-gift-strip" aria-label="Free gifts with your order">

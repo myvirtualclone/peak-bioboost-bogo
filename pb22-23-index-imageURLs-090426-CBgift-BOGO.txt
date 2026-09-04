@@ -72,6 +72,7 @@ https://secure.getpeakbiome.com/images/pb34/img73.jpg
 https://secure.getpeakbiome.com/images/pb34/img76.jpg
 https://secure.getpeakbiome.com/images/pb34/img82.jpg
 https://secure.getpeakbiome.com/images/pb34/img86.jpg
+https://secure.getpeakbiome.com/images/pb34/pmtlogos.png
 https://secure.getpeakbiome.com/images/pb22/cookbookimage.png
 https://secure.getpeakbiome.com/images/pb22/pb22-suboption-shipping-truck.svg
 https://secure.getpeakbiome.com/images/pb22/freereturnshipping.png
