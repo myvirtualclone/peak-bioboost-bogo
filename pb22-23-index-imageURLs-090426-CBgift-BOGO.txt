@@ -82,3 +82,4 @@ https://secure.getpeakbiome.com/images/pb22/Head-Logo.png
 https://secure.getpeakbiome.com/images/pb22/phone.png
 https://secure.getpeakbiome.com/images/pb22/claimoffer-2gifts.png
 https://secure.getpeakbiome.com/images/pb22/guarantee.png
+https://secure.getpeakbiome.com/images/pb22/2ndjarfree.png
