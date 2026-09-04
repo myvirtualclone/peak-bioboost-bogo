@@ -9816,7 +9816,7 @@ main.hero#offer{padding-bottom:0!important;}
   max-width:none !important;
   width:100% !important;
   margin:0 !important;
-  padding:0 20px !important; /* 20px outside the bordered gifts box */
+  padding:0 !important;
   height:100%;
   box-sizing:border-box;
 }
@@ -9827,19 +9827,18 @@ main.hero#offer{padding-bottom:0!important;}
   flex-direction:column;
   justify-content:flex-start;
   box-sizing:border-box;
-  padding-bottom:8px;
-  /* Same border language as YOUR BOGO ORDER (.bogo-table) */
-  border:1.5px solid #9ec9ea !important;
-  border-radius:12px !important;
-  background:#fff !important;
+  padding:0;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
   box-shadow:none !important;
-  overflow:hidden;
+  overflow:visible;
 }
 .pb22-gift-hero-art{
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:18px 16px 0;
+  padding:8px 8px 12px;
 }
 .pb22-gift-hero-img{
   display:block;
@@ -9848,6 +9847,10 @@ main.hero#offer{padding-bottom:0!important;}
   height:auto;
   object-fit:contain;
   margin:0 auto;
+}
+/* Desktop: blue border + inner padding separates bottles above from $43 block */
+.pb22-gift-panel{
+  box-sizing:border-box;
 }
 .bogo-offer-row .pb22-gift-title{
   margin:10px 18px 8px;
@@ -9881,11 +9884,13 @@ main.hero#offer{padding-bottom:0!important;}
   line-height:1.2;
 }
 .bogo-offer-row .pb22-gift-value{margin-top:6px;}
+/* Trust strip: match offer-row width (full two-column span) */
 .bogo-trust-bar{
   max-width:1100px;
   width:calc(100% - 32px);
-  margin:0 auto 0;
-  padding:0 0 24px;
+  margin:15px auto 0;
+  padding:0;
+  padding-bottom:0;
   box-sizing:border-box;
 }
 .bogo-trust-bar .v2-trust-card{
@@ -9896,6 +9901,8 @@ main.hero#offer{padding-bottom:0!important;}
   margin:0;
   padding:14px 16px 12px;
   box-shadow:0 8px 22px rgba(10,38,80,.06);
+  box-sizing:border-box;
+  width:100%;
 }
 .bogo-trust-bar .v2-trust-line{
   text-align:center;
@@ -9939,25 +9946,48 @@ section#guarantee.hybrid-guarantee-area,
   .bogo-offer-row .pb22-gift-title-text{display:block;margin-top:15px !important;}
   .bogo-offer-row .bogo-row{padding:3px 0 !important;}
   .bogo-offer-row .bogo-wrap{padding-left:20px !important;padding-right:20px !important;}
+  .bogo-offer-row .pb22-gift-panel{
+    border:1.5px solid #9ec9ea;
+    border-radius:12px;
+    background:#fff;
+    padding:12px 20px 16px;
+    margin:0;
+  }
+  /* Align trust bar to same left/right edges as the two-column row */
+  .bogo-trust-bar{
+    max-width:1100px;
+    width:calc(100% - 32px);
+    margin-top:15px;
+    padding-bottom:0;
+  }
 }
 @media (max-width:900px){
   .bogo-offer-row{
     grid-template-columns:1fr;
     max-width:560px;
     width:calc(100% - 24px);
-    gap:14px;
+    gap:0;
     margin:8px auto 8px;
   }
   .bogo-offer-row .bogo-wrap{grid-column:1;grid-row:1;padding:8px 10px 4px;}
-  .bogo-offer-row .pb22-gift-strip{grid-column:1;grid-row:2;padding:0 20px !important;}
-  .pb22-gift-hero-art{padding:14px 12px 0;}
-  .pb22-gift-hero-img{max-width:220px;}
+  .bogo-offer-row .pb22-gift-strip{grid-column:1;grid-row:2;padding:0 !important;}
+  .bogo-offer-row .pb22-gift-panel{
+    border:0 !important;
+    border-radius:0 !important;
+    padding:0 !important;
+    margin:0 !important;
+    background:transparent !important;
+  }
+  .bogo-offer-row .pb22-gift-hero-art{display:none !important;}
+  .bogo-offer-row .bogo-row{padding:4px 0 !important;gap:0 !important;}
+  .bogo-offer-row .bogo-cta{margin-top:0 !important;}
   .bogo-offer-row .pb22-gift-title{margin:10px 12px 10px;font-size:24px;}
   .bogo-offer-row .pb22-gift-items{padding:6px 10px 14px;}
   .bogo-trust-bar{
     max-width:560px;
     width:calc(100% - 24px);
-    padding:0 0 20px;
+    margin-top:15px;
+    padding-bottom:0;
   }
 }
 
@@ -10024,6 +10054,7 @@ section#guarantee.hybrid-guarantee-area,
 <div class="pb22-gift-hero-art">
 <img src="images/2ndjarfree.png" alt="Buy 1 Get 1 Free — second jar free" class="pb22-gift-hero-img" decoding="async" referrerpolicy="no-referrer">
 </div>
+<div class="pb22-gift-panel">
 <h2 class="pb22-gift-title"><span class="pb22-gift-title-text"><strong>$43.00</strong> of FREE Gifts<br><span class="pb22-gift-mobile-break"></span> With Your Order</span></h2>
 <div class="pb22-gift-items">
 <div class="pb22-gift-item">
@@ -10045,6 +10076,7 @@ section#guarantee.hybrid-guarantee-area,
 <div class="pb22-gift-icon"><img src="images/pb22-suboption-shield.svg" alt="" decoding="async" referrerpolicy="no-referrer"></div>
 <div class="pb22-gift-label">FREE SHIPPING<br>INSURANCE</div>
 <div class="pb22-gift-value"><span>$3</span><span>VALUE</span></div>
+</div>
 </div>
 </div>
 </div>
