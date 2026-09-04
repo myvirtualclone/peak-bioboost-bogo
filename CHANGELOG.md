@@ -2,6 +2,11 @@
 
 All notable changes to the Peak BioBoost BOGO landing page (`peak-bioboost-bogo`) are documented here.
 
+## [1.3.7] - 2026-09-04
+
+### Changed
+- BOGO ADD TO CART offer id `3157` → `3161` (match cart FRS+SI savings/gifts)
+
 ## [1.3.6] - 2026-09-04
 
 ### Changed
