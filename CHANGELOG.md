@@ -2,6 +2,11 @@
 
 All notable changes to the Peak BioBoost BOGO landing page (`peak-bioboost-bogo`) are documented here.
 
+## [1.3.2] - 2026-09-04
+
+### Fixed
+- Moved `#9ec9ea` rounded border + 20px side padding onto the `$43` free-gifts card (not the trust/payment strip)
+
 ## [1.3.1] - 2026-09-04
 
 ### Changed
