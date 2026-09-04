@@ -2,6 +2,11 @@
 
 All notable changes to the Peak BioBoost BOGO landing page (`peak-bioboost-bogo`) are documented here.
 
+## [1.3.5] - 2026-09-04
+
+### Changed
+- Desktop: `.hybrid-guarantee-card` `margin-top: 25px`
+
 ## [1.3.4] - 2026-09-04
 
 ### Changed
